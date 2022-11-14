@@ -36,7 +36,7 @@ namespace PowerSeries
             var p2 = (1 + x).Pow(10);
             var p3 = (1 - 2 * x + 2 * x * x) / ((1 - x) * (1 - x) * (1 - 2 * x));
 
-            //Console.WriteLine(x.Derivative());
+            Console.WriteLine(x.Derivative());
             Console.WriteLine(Arccos(x*x).ToPolyString());
             Console.WriteLine(Log(poly));
 
@@ -46,10 +46,10 @@ namespace PowerSeries
             Console.WriteLine("sqrt(4+x) = " + poly.ToPolyString());
             Console.WriteLine("cos(x) = " + cosx.ToPolyString());
 
-            //var cp = new ComplexPolynomial(n => 1 + i);
-            //Console.WriteLine(cp.Pow(2));
-            //Console.WriteLine(cp.Real);
-            //Console.WriteLine((4 / (x*x + 1)).Integrate(0, 1, 80));
+            var cp = new ComplexPolynomial(n => 1 + i);
+            Console.WriteLine(cp.Pow(2));
+            Console.WriteLine(cp.Real);
+            Console.WriteLine((4 / (x*x + 1)).Integrate(0, 1, 80));
             sw.Stop();
             Console.WriteLine(sw.ElapsedMilliseconds + "ms");
             */

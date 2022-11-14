@@ -149,9 +149,11 @@ namespace PowerSeries
             => new ExtendedPolynomial(i => (i == 0) ? a : 0);
 
 
-        public override string ToString()
+        public override string ToString() => ToString(10);
+
+        public string ToString(int n)
         {
-            return "{ " + string.Join(", ", Enumerable.Range(0, 10).Select(x => this[x])) + ", ... }";
+            return "{ " + string.Join(", ", Enumerable.Range(0, n).Select(x => this[x])) + ", ... }";
         }
 
         public string ToPolyString(int deg = 10)
